@@ -16,10 +16,11 @@ void setup() {
 }
 
 void loop() {
+  tempo = 0;
   acionamento = digitalRead(pinopir);                                    
   Serial.println(acionamento);
 
-  while(tempo < 30){
+  while(tempo < 5){
     delay(5000);
     acionamento = digitalRead(pinopir);
     if(acionamento == 0){
